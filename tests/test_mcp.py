@@ -119,7 +119,7 @@ def mcp_initialize_request():
         "id": 1,
         "method": "initialize",
         "params": {
-            "protocolVersion": "2024-11-05",
+            "protocolVersion": "2025-03-26",
             "capabilities": {"tools": {}, "resources": {}},
             "clientInfo": {"name": "Test MCP Client", "version": "1.0.0"},
         },
@@ -172,7 +172,7 @@ async def test_mcp_initialize(mcp_initialize_request):
             assert "result" in data
 
             result = data["result"]
-            assert result["protocolVersion"] == "2024-11-05"
+            assert result["protocolVersion"] == "2025-03-26"
             assert "capabilities" in result
             assert "serverInfo" in result
             assert result["serverInfo"]["name"] == "LitServe MCP Server"
